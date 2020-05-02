@@ -12,6 +12,7 @@
 </head>
 <body>
     <h3>数据类型转换请求页</h3>
+    <p><a href="../initBinder">跳转至使用InitBinder注解页面进行数据转换页</a></p>
     <form action="../dataTypeTrans" method="post">
         <div>
             <label for="username">姓名: </label>
