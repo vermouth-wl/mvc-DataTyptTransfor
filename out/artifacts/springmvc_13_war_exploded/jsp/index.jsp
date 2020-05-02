@@ -11,6 +11,19 @@
     <title>Title</title>
 </head>
 <body>
-
+    <h3>数据类型转换请求页</h3>
+    <form action="../dataTypeTrans" method="post">
+        <div>
+            <label for="username">姓名: </label>
+            <input type="text" name="username" id="username"/>
+        </div>
+       <div>
+           <label for="birthday">生日:</label>
+           <input type="date" name="birthday" id="birthday"/>
+       </div>
+        <div>
+            <input type="submit" value="提交"/>
+        </div>
+    </form>
 </body>
 </html>

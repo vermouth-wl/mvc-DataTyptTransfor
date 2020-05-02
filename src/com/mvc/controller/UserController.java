@@ -1,6 +1,9 @@
 package com.mvc.controller;
 
+import com.mvc.entity.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -14,9 +17,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class UserController {
 
-    /* 创建index方法 */
+    /* 创建index()方法 */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(){
         return "index";
+    }
+
+    /* 创建dataTypeTrans()方法 */
+    @RequestMapping(value = "/dataTypeTrans", method = RequestMethod.POST)
+    public String dataTypeTrans(@ModelAttribute User user, Model model){
+        System.out.println("接收前端数据为: " + user.getUsername() + "----" + user.getBirthday());
+        model.addAttribute("user", user);
+        return "success";
     }
 }
